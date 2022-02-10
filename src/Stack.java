@@ -1,15 +1,15 @@
 public class Stack {
 
-    private boolean isEmpty = true;
+    private int counter=0;
     private int element;
 
     public boolean isEmpty() {
-        return isEmpty;
+        return counter == 0 ;
     }
 
     public int push(int element) {
         this.element = element;
-        isEmpty = false;
+        counter++;
         return 0;
     }
 
@@ -17,6 +17,7 @@ public class Stack {
         if(isEmpty()){
             throw new UnderFlow();
         }
+        --counter;
         return element;
     }
 

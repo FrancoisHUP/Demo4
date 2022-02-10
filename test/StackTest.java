@@ -34,5 +34,13 @@ public class StackTest {
         assertEquals(stack.pop(), 1);
     }
 
+    @Test
+    public void towPushesOnePop_WillNotBeEmpty() throws Stack.UnderFlow {
+        stack.push(0);
+        stack.push(1);
+        stack.pop();
+        assertFalse(stack.isEmpty());
+    }
+
 
 }
