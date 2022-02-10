@@ -1,24 +1,22 @@
 public class Stack {
 
     private int counter=0;
-    private int element;
+    private int element[] = new int[2];
 
     public boolean isEmpty() {
         return counter == 0 ;
     }
 
     public int push(int element) {
-        this.element = element;
-        counter++;
+        this.element[counter++] = element;
         return 0;
     }
 
     public int pop() throws UnderFlow {
-        if(isEmpty()){
+        if(isEmpty()) {
             throw new UnderFlow();
         }
-        --counter;
-        return element;
+        return element[--counter];
     }
 
     public class UnderFlow extends Exception {

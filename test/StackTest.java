@@ -42,5 +42,13 @@ public class StackTest {
         assertFalse(stack.isEmpty());
     }
 
+    @Test
+    public void afterPushXY_PopYX() throws Stack.UnderFlow {
+        stack.push(0);
+        stack.push(1);
+        assertEquals(stack.pop(),1);
+        assertEquals(stack.pop(),0);
+    }
+
 
 }
