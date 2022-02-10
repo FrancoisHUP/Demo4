@@ -1,13 +1,25 @@
+import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class StackTest {
 
+    private Stack stack;
+    @Before
+    public void setUp(){
+        stack = new Stack();
+    }
     @Test
-    public void newStackIsEmpty(){
-        Stack stack = new Stack();
+    public void newStackIsEmpty() {
         assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    public void onePush_isNotEmpty(){
+        stack.push(0);
+        assertFalse(stack.isEmpty());
     }
 
 }
