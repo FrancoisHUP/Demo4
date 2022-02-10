@@ -30,6 +30,9 @@ public class StackTest {
     public void afterPushX_PopX() throws Stack.UnderFlow {
         stack.push(0);
         assertEquals(stack.pop(), 0);
+        stack.push(1);
+        assertEquals(stack.pop(), 1);
     }
+
 
 }

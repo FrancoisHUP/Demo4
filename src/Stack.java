@@ -1,12 +1,14 @@
 public class Stack {
 
     private boolean isEmpty = true;
+    private int element;
 
     public boolean isEmpty() {
         return isEmpty;
     }
 
     public int push(int element) {
+        this.element = element;
         isEmpty = false;
         return 0;
     }
@@ -15,7 +17,7 @@ public class Stack {
         if(isEmpty()){
             throw new UnderFlow();
         }
-        return 0;
+        return element;
     }
 
     public class UnderFlow extends Exception {
