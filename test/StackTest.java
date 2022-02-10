@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class StackTest {
 
@@ -25,6 +24,12 @@ public class StackTest {
     @Test(expected = Stack.UnderFlow.class)
     public void popOnEmptyStack_WillThrowException() throws Stack.UnderFlow {
         stack.pop();
+    }
+
+    @Test
+    public void afterPushX_PopX() throws Stack.UnderFlow {
+        stack.push(0);
+        assertEquals(stack.pop(), 0);
     }
 
 }

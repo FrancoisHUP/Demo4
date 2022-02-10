@@ -11,8 +11,11 @@ public class Stack {
         return 0;
     }
 
-    public void pop() throws UnderFlow {
-        throw new UnderFlow();
+    public int pop() throws UnderFlow {
+        if(isEmpty()){
+            throw new UnderFlow();
+        }
+        return 0;
     }
 
     public class UnderFlow extends Exception {
