@@ -22,4 +22,9 @@ public class StackTest {
         assertFalse(stack.isEmpty());
     }
 
+    @Test(expected = Stack.UnderFlow.class)
+    public void popOnEmptyStack_WillThrowException() throws Stack.UnderFlow {
+        stack.pop();
+    }
+
 }

@@ -10,4 +10,11 @@ public class Stack {
         isEmpty = false;
         return 0;
     }
+
+    public void pop() throws UnderFlow {
+        throw new UnderFlow();
+    }
+
+    public class UnderFlow extends Exception {
+    }
 }
